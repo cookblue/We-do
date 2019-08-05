@@ -1,0 +1,176 @@
+<template>
+  <div class="todo-head">
+    <div class="hl-flex-center">
+      <div class="todo-head-title">
+        <span class="todo-head-title-dw">CxL,
+          <span class="todo-head-title-dn"> Fun</span>
+        </span>
+        <span class="color-gray">😎⚡🌅🎡🎤🎸🔭</span>
+      </div>
+      <div class="todo-head-total">
+        <span class="color-gray">{{ todos.length }}</span>
+      </div>
+    </div>
+    <div class="todo-head-add pointer">
+      <router-link to="/new">
+        <span class="todo-head-add-plus">+</span>
+      </router-link>
+    </div>
+  </div>
+</template>
+
+<script>
+import { db } from '../db';
+
+export default {
+  name: 'TodoGroup',
+  props: {
+    msg: String,
+  },
+  firebase: {
+    todos: db.ref('todos'),
+  },
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+a {
+  text-decoration: none;
+}
+.pointer {
+  cursor: pointer;
+}
+.hl-flex-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+}
+.todo-head {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  background: #cbccce24;
+  position: relative;
+  border-bottom: 1px solid #6b62621c;
+}
+.todo-head-title {
+  display: flex;
+  height: 47px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+.todo-head-title-dw {
+  color: #5a5de0;
+  font-weight: bold;
+  font-size: 23px;
+}
+.todo-head-title-dn {
+font-weight: normal;
+}
+.color-gray {
+  color: #bebdc5;
+  font-weight: bold;
+  font-size: 14px;
+}
+.todo-head-add {
+  background: #e87878;
+  position: absolute;
+  border-radius: 50%;
+  height: 46px;
+  width: 46px;
+  bottom: -24.5px;
+  right: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.todo-head-add-plus {
+  color: white;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  border-bottom: 1px solid #6b62621c;
+}
+.center {
+  text-align: center;
+}
+.todo-item-group {
+  width: 80%;
+  text-align: center;
+}
+
+.todo-item-time {
+  width: 20%;
+}
+
+.todo-item-check {
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+}
+.todo-item-check + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.todo-item-check + label:before {
+  content: '';
+  border: 1.5px solid gray;
+  border-radius: 3px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 15px;
+  height: 15px;
+  background: white;
+}
+
+.todo-item-check:hover + label:before {
+  border: 1.5px solid gray !important;
+  border-radius: 3px;
+}
+
+.todo-item-check:checked + label:before {
+  background: #f35429;
+  border: 1.5px solid transparent !important;
+  border-radius: 3px;
+}
+
+.todo-item-check:checked + label:after {
+  content: '';
+  position: absolute;
+  left: 3.5px;
+  top: 8px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow:
+    2px 0 0 white,
+    4px 0 0 white,
+    4px -2px 0 white,
+    4px -4px 0 white,
+    4px -6px 0 white,
+    4px -8px 0 white;
+  transform: rotate(45deg);
+}
+
+.todo-item-check:checked + label {
+  text-decoration: line-through;
+  font-style: italic;
+  color: gray;
+}
+
+</style>

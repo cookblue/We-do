@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>head</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style-head.css">
+</head>
+<body>
+  <div class="todo-head">
+    <div class="hl-flex-center">
+      <div class="todo-head-title">
+        <span class="todo-head-title-dw">Thursday,<span class="todo-head-title-dn"> 10th</span></span>
+        <span class="color-gray"> December</span>
+      </div>
+      <div class="todo-head-total">
+        <span class="color-gray">12 tasks</span>
+      </div>
+    </div>
+    <div class="todo-head-add pointer">
+      <span class="todo-head-add-plus" onclick="redirectIt(this)" href="./add-item.html">+</span>
+    </div>
+  </div>
+  <div class="todo-item">
+    <div class="todo-item-group">
+      <input class="todo-item-check" type="checkbox" id="check1">
+      <label class="todo-item-title">Lorem ipsum dolor sit amet </label>
+    </div>
+    <span class="todo-item-time center">3 horas</span>
+  </div>
+  <img src="./todo.png">
+  <script type="text/javascript">
+    function redirectIt(obj){
+    var goToLink = obj.getAttribute("href");
+    window.location.href=goToLink;
+}
+  </script>
+</body>
+</html>

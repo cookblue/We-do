@@ -1,0 +1,66 @@
+* {
+  font-family: 'PT Sans', sans-serif;
+  background: #6e4ec7;
+  color: white;
+}
+.pointer {
+  cursor: pointer;
+}
+.todo-new {
+  display: flex;
+  flex-direction: column;
+}
+.todo-new-task {
+  display: flex;
+  align-items: center;
+  height: 54px;
+  justify-content: space-between;
+  border-bottom: 1px solid #80808078;
+  margin-left: 27px;
+}
+.todo-new-task p {
+  margin-right: 27px;
+}
+.style-arrow-left {
+  position: absolute;
+  left: 13px;
+}
+.style-task {
+  height: 400px;
+}
+.style-v {
+  margin-right: 37px;
+  color: #8f6fdf;
+}
+.style-description {
+  height: 100px;
+}
+.style-head {
+  justify-content: center !important;
+  width: 100% !important;
+  height: 70px !important;
+  border-bottom: none !important;
+  margin-left: 0px !important;
+}
+.material-icons {
+  color: #b7b2b2;
+}
+.style-icons {
+  justify-content: space-between !important;
+}
+.style-voice {
+  margin-right: 11px;
+}
+.style-button{
+  height:246px;
+  border-bottom: none !important;
+  justify-content: center !important;
+}
+.todo-new-task-button {
+  height: 40px;
+  width: 106px;
+  border-radius: 27px;
+  background:#ff4953;
+  border-color: #ff4953;
+  font-size: 12px;
+}

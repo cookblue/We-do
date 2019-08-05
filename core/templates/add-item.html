@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+    <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style-add-item.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body>
+  <div class="todo-new">
+    <div class="style-task">
+      <div class="todo-new-task style-head">
+        <i class="material-icons style-arrow-left pointer" onclick="redirectIt(this)" href="./todo-head.html">keyboard_backspace</i>
+        <span>Add new task</span>
+      </div>
+      <div class="todo-new-task">
+        <span >Personal Errads</span>
+        <i class="material-icons style-v pointer">expand_more</i>
+      </div>
+      <span class="todo-new-task">Save the world</span>
+      <span class="todo-new-task">Jueves 5pm</span>
+      <div class="todo-new-task style-description">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nis.</p>
+      </div>
+      <div class="todo-new-task style-icons">
+        <i class = "material-icons pointer">camera_alt</i>
+        <i class = "material-icons pointer">insert_photo</i>
+        <i class = "material-icons pointer">videocam</i>
+        <i class = "material-icons pointer">attach_file</i>
+        <i class = "material-icons style-voice pointer">keyboard_voice</i>
+      </div>
+    </div>
+    <div class="todo-new-task style-button">
+      <button class="todo-new-task-button pointer">ADD TASK</button>
+    </div>
+  </div>
+</body>
+ <script type="text/javascript">
+    function redirectIt(obj){
+    var goToLink = obj.getAttribute("href");
+    window.location.href=goToLink;
+}
+  </script>
+</html>
